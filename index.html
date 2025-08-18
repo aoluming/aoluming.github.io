@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiaqi Li - Academic Homepage</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        neutral: '#f1f5f9',
+                        'neutral-dark': '#334155',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-fade {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .section-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .timeline-dot::before {
+                content: '';
+                @apply absolute left-0 top-3 w-3 h-3 rounded-full bg-primary;
+            }
+            .nav-link {
+                @apply relative px-3 py-2 text-neutral-dark hover:text-primary transition-colors duration-300;
+            }
+            .nav-link::after {
+                content: '';
+                @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="#" class="text-xl font-semibold text-primary">Jiaqi Li</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#news" class="nav-link">News</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#awards" class="nav-link">Awards</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-primary">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100">About</a>
+            <a href="#news" class="block px-3 py-2 rounded-md hover:bg-gray-100">News</a>
+            <a href="#publications" class="block px-3 py-2 rounded-md hover:bg-gray-100">Publications</a>
+            <a href="#services" class="block px-3 py-2 rounded-md hover:bg-gray-100">Services</a>
+            <a href="#awards" class="block px-3 py-2 rounded-md hover:bg-gray-100">Awards</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<header class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+<div class="w-full max-w-md bg-gray-200 overflow-hidden shadow-lg rounded-lg md:max-w-lg lg:max-w-xl">
+    <img src="./p.png" alt="Jiaqi Li in research environment"
+         class="w-full h-full object-cover aspect-[4/3]">
+</div>
+                <div class="text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Jiaqi Li 李嘉琦</h1>
+                <p class="text-xl text-gray-700 mb-2">Ph.D. Student at Southeast University</p>
+                <p class="text-lg text-gray-600 mb-4">Focused on Multimodal, Machine Unlearning, Privacy and
+                    Security</p>
+                <div class="flex items-center justify-center md:justify-start space-x-4">
+                    <a href="mailto:jqli@seu.edu.cn"
+                       class="text-primary hover:text-secondary transition-colors flex items-center">
+                        <i class="fa fa-envelope mr-2"></i>
+                        <span>jqli@seu.edu.cn</span>
+                    </a>
+                    <!--                        <a href="#" class="text-primary hover:text-secondary transition-colors">-->
+                    <!--                            <i class="fa fa-google scholar text-xl"></i>-->
+                    <!--                        </a>-->
+                    <!--                        <a href="#" class="text-primary hover:text-secondary transition-colors">-->
+                    <!--                            <i class="fa fa-github text-xl"></i>-->
+                    <!--                        </a>-->
+                    <!--                        <a href="#" class="text-primary hover:text-secondary transition-colors">-->
+                    <!--                            <i class="fa fa-linkedin text-xl"></i>-->
+                    <!--                        </a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- About Me Section -->
+    <section id="about" class="mb-16 section-fade">
+        <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary">About Me</h2>
+            <div class="prose lg:prose-lg max-w-none">
+                <p class="mb-4">I am a fourth-year Ph.D. student (enrolled in 2022) in Cyberspace Security at Southeast
+                    University, advised by Professor Guilin Qi. My research interests broadly cover <strong>multimodal
+                        information extraction</strong> and <strong>knowledge editing & machine unlearning in multimodal
+                        large language models (MLLMs)</strong>.</p>
+                <p>Currently, my work focuses on <strong>machine unlearning in MLLMs</strong>, particularly <strong>erasing
+                    visual concepts to mitigate privacy leakage in multimodal systems</strong>. Moving forward, I aim to
+                    develop <strong>more efficient unlearning methods for MLLMs or text-to-image models</strong> to
+                    address privacy and safety challenges in multimodal generative AI.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="mb-16 section-fade">
+        <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary">News</h2>
+            <ul class="space-y-6">
+                <li class="relative pl-8 timeline-dot">
+                    <span class="font-semibold text-primary">2025.5</span>
+                    <p class="mt-1">My paper "Forget the Token and Pixel: Rethinking Gradient Ascent for Concept
+                        Unlearning in Multimodal Generative Models" has been accepted to ACL 2025 Findings.</p>
+                </li>
+                <li class="relative pl-8 timeline-dot">
+                    <span class="font-semibold text-primary">2025.5</span>
+                    <p class="mt-1">My paper "Open-World Attribute Mining for E-Commerce Products with Multimodal
+                        Self-Correction Instruction Tuning" has been accepted to ACL 2025 Main.</p>
+                </li>
+                <li class="relative pl-8 timeline-dot">
+                    <span class="font-semibold text-primary">2024.9</span>
+                    <p class="mt-1">My paper "Single Image Unlearning: Efficient Machine Unlearning in Multimodal Large
+                        Language Models" has been accepted to NeurIPS 2024.</p>
+                </li>
+                <li class="relative pl-8 timeline-dot">
+                    <span class="font-semibold text-primary">2024.5</span>
+                    <p class="mt-1">My paper "MIKE: A New Benchmark for Fine-grained Multimodal Entity Knowledge
+                        Editing" has been accepted to ACL 2024 Findings.</p>
+                </li>
+                <li class="relative pl-8 timeline-dot">
+                    <span class="font-semibold text-primary">2023.10</span>
+                    <p class="mt-1">My paper "Three Stream Based Multi-level Event Contrastive Learning for Text-Video
+                        Event Extraction" has been accepted to EMNLP 2023 Main.</p>
+                </li>
+                <li class="relative pl-8 timeline-dot">
+                    <span class="font-semibold text-primary">2023.9</span>
+                    <p class="mt-1">My paper "Incorporating Domain Knowledge Graph into Multimodal Movie Genre
+                        Classification with Self-Supervised Attention and Contrastive Learning" has been accepted to ACM
+                        Multimedia 2023.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="mb-16 section-fade">
+        <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary">Publications</h2>
+
+            <!-- Preprints -->
+            <div class="mb-10">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Preprints</h3>
+                <div class="bg-blue-50 rounded-lg p-5 border-l-4 border-primary">
+                    <p class="font-medium mb-2">Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey</p>
+                    <p class="text-gray-600 text-sm mb-3">Zhuo Chen, Yichi Zhang, Yin Fang, Yuxia Geng, Lingbing Guo,
+                        Xiang Chen, Qian Li, Wen Zhang, Jiaoyan Chen, Yushan Zhu, Jiaqi Li, Xiaoze Liu, Jeff Z. Pan,
+                        Ningyu Zhang, Huajun Chen</p>
+                    <a href="https://arxiv.org/abs/2402.05391" target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-file-pdf-o mr-1"></i>
+                        Paper: [2402.05391] Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey
+                    </a>
+                </div>
+            </div>
+
+            <!-- Published Papers -->
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Peer-Reviewed</h3>
+            <div class="space-y-6">
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">Incorporating Domain Knowledge Graph into Multimodal Movie Genre
+                        Classification with Self-Supervised Attention and Contrastive Learning</p>
+                    <p class="text-gray-600 italic text-sm mb-2">ACM Multimedia 2023</p>
+                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Guilin Qi, Chuanyi Zhang, Yongrui Chen, Yiming Tan,
+                        Chenlong Xia, Ye Tian</p>
+                    <a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612085?__cf_chl_tk=vUFi6at1tjVfjxNFoBtG210byWCqvCdFR96Ko76aOJQ-1755487695-1.0.1.1-yJpdErlJ4QOaC57hfI9PVT.4KKaJoK.SBfstM7bZGk8"
+                       target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        ACM Digital Library
+                    </a>
+                </div>
+
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">Three Stream Based Multi-level Event Contrastive Learning for Text-Video
+                        Event Extraction</p>
+                    <p class="text-gray-600 italic text-sm mb-2">EMNLP 2023 Main</p>
+                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Chuanyi Zhang, Miaozeng Du, Dehai Min, Yongrui Chen,
+                        Guilin Qi</p>
+                    <a href="https://aclanthology.org/2023.emnlp-main.103/" target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        ACL Anthology
+                    </a>
+                </div>
+
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">MIKE: A New Benchmark for Fine-grained Multimodal Entity Knowledge
+                        Editing</p>
+                    <p class="text-gray-600 italic text-sm mb-2">ACL 2024 Findings</p>
+                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Miaozeng Du, Chuanyi Zhang, Yongrui Chen, Nan Hu,
+                        Guilin Qi, Haiyun Jiang, Siyuan Cheng, Bozhong Tian</p>
+                    <a href="https://aclanthology.org/2024.findings-acl.298/" target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        ACL Anthology
+                    </a>
+                </div>
+
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">Single Image Unlearning: Efficient Machine Unlearning in Multimodal
+                        Large Language Models</p>
+                    <p class="text-gray-600 italic text-sm mb-2">NeurIPS 2024</p>
+                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Qianshan Wei, Chuanyi Zhang, Guilin Qi, Miaozeng Du,
+                        Yongrui Chen, Sheng Bi, Fan Liu</p>
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/3e53d82a1113e3d240059a9195668edc-Paper-Conference.pdf"
+                       target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        NeurIPS Proceedings
+                    </a>
+                </div>
+
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">Open-World Attribute Mining for E-Commerce Products with Multimodal
+                        Self-Correction Instruction Tuning</p>
+                    <p class="text-gray-600 italic text-sm mb-2">ACL 2025 Main</p>
+                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Yanming Li, Xiaoli Shen, Chuanyi Zhang, Guilin Qi,
+                        Sheng Bi</p>
+                    <a href="https://aclanthology.org/2025.acl-long.85/" target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        ACL Anthology (to be updated)
+                    </a>
+                </div>
+
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">Forget the Token and Pixel: Rethinking Gradient Ascent for Concept
+                        Unlearning in Multimodal Generative Models</p>
+                    <p class="text-gray-600 italic text-sm mb-2">ACL 2025 Findings</p>
+                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Chuanyi Zhang, Miaozeng Du, Hui Zhang, Yongrui Chen,
+                        Qianshan Wei, Junfeng Fang, Ruipeng Wang, Sheng Bi, Guilin Qi</p>
+                    <a href="https://aclanthology.org/2025.findings-acl.630/" target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        ACL Anthology (to be updated)
+                    </a>
+                </div>
+
+                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+                    <p class="font-medium mb-2">Can Large Language Models Understand DL-Lite Ontologies? An Empirical
+                        Study</p>
+                    <p class="text-gray-600 italic text-sm mb-2">EMNLP 2024 Findings</p>
+                    <p class="text-gray-600 text-sm mb-3">Keyu Wang, Guilin Qi, Jiaqi Li, Songlin Zhai</p>
+                    <a href="https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2024.findings-emnlp.141.pdf"
+                       target="_blank"
+                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
+                        <i class="fa fa-external-link mr-1"></i>
+                        ACL Anthology
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Services Section -->
+    <section id="services" class="mb-16 section-fade">
+        <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary">Academic Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: ICCV</span>
+                </div>
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: CVPR</span>
+                </div>
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: ICLR</span>
+                </div>
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: NeurIPS</span>
+                </div>
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: ARR</span>
+                </div>
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: AAAI</span>
+                </div>
+                <div class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                    <span>Conference Reviewer: Multimedia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Honors Section -->
+    <section id="awards" class="mb-16 section-fade">
+        <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary">Awards & Honors</h2>
+            <div class="bg-yellow-50 rounded-lg p-5 border-l-4 border-yellow-400">
+                <h3 class="font-semibold text-lg mb-2">National Scholarship</h3>
+                <p class="text-gray-700">Awarded for outstanding academic performance and research achievements at
+                    Southeast University in 2024</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p>© 2025 Jiaqi Li. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+<!--                <a href="#" class="text-gray-400 hover:text-white transition-colors">-->
+<!--                    <i class="fa fa-google scholar text-xl"></i>-->
+<!--                </a>-->
+<!--                <a href="#" class="text-gray-400 hover:text-white transition-colors">-->
+<!--                    <i class="fa fa-github text-xl"></i>-->
+<!--                </a>-->
+<!--                <a href="#" class="text-gray-400 hover:text-white transition-colors">-->
+<!--                    <i class="fa fa-linkedin text-xl"></i>-->
+<!--                </a>-->
+                <a href="mailto:jqli@seu.edu.cn" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa fa-envelope text-xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-sm text-gray-500">
+            <p>Last updated: August 2025</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript for interactions -->
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Intersection Observer for fade-in sections
+    const sections = document.querySelectorAll('.section-fade');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Add shadow to navbar on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 10) {
+            nav.classList.add('shadow');
+        } else {
+            nav.classList.remove('shadow');
+        }
+    });
+</script>
+</body>
+</html>
