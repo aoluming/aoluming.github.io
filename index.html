@@ -200,162 +200,271 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="mb-16 section-fade">
-        <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary">Publications</h2>
+<!-- Publications Section -->
+<style>
+  .author-highlight {
+    font-weight: 700;
+    color: hsl(var(--primary));
+    background: linear-gradient(to right, hsl(var(--primary) / 0.08), hsl(var(--secondary) / 0.08));
+    padding: 0 3px;
+    border-radius: 4px;
+    border-bottom: 2px solid hsl(var(--primary) / 0.5);
+  }
+  @media print {
+    .author-highlight {
+      background: none;
+      border-bottom: 1px solid #000;
+      color: #000;
+      font-weight: bold;
+    }
+  }
+</style>
 
-            <!-- Preprints -->
-            <div class="mb-10">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Preprints</h3>
-                <div class="bg-blue-50 rounded-lg p-5 border-l-4 border-primary">
-                    <p class="font-medium mb-2">Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey</p>
-                    <p class="text-gray-600 text-sm mb-3">Zhuo Chen, Yichi Zhang, Yin Fang, Yuxia Geng, Lingbing Guo,
-                        Xiang Chen, Qian Li, Wen Zhang, Jiaoyan Chen, Yushan Zhu, Jiaqi Li, Xiaoze Liu, Jeff Z. Pan,
-                        Ningyu Zhang, Huajun Chen</p>
-                    <a href="https://arxiv.org/abs/2402.05391" target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-file-pdf-o mr-1"></i>
-                        Paper: [2402.05391] Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey
-                    </a>
-                </div>
-            </div>
+<section id="publications" class="mb-16 section-fade">
+    <div class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-gray-100">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-primary flex items-center gap-2">
+            <i class="fa fa-book text-primary"></i> Publications
+        </h2>
 
-            <!-- Published Papers -->
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Peer-Reviewed</h3>
-            <div class="space-y-6">
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Incorporating Domain Knowledge Graph into Multimodal Movie Genre
-                        Classification with Self-Supervised Attention and Contrastive Learning</p>
-                    <p class="text-gray-600 italic text-sm mb-2">ACM Multimedia 2023</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Guilin Qi, Chuanyi Zhang, Yongrui Chen, Yiming Tan,
-                        Chenlong Xia, Ye Tian</p>
-                    <a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612085?__cf_chl_tk=vUFi6at1tjVfjxNFoBtG210byWCqvCdFR96Ko76aOJQ-1755487695-1.0.1.1-yJpdErlJ4QOaC57hfI9PVT.4KKaJoK.SBfstM7bZGk8"
-                       target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACM Digital Library
-                    </a>
-                </div>
-
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Three Stream Based Multi-level Event Contrastive Learning for Text-Video
-                        Event Extraction</p>
-                    <p class="text-gray-600 italic text-sm mb-2">EMNLP 2023 Main</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Chuanyi Zhang, Miaozeng Du, Dehai Min, Yongrui Chen,
-                        Guilin Qi</p>
-                    <a href="https://aclanthology.org/2023.emnlp-main.103/" target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACL Anthology
-                    </a>
-                </div>
-
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">MIKE: A New Benchmark for Fine-grained Multimodal Entity Knowledge
-                        Editing</p>
-                    <p class="text-gray-600 italic text-sm mb-2">ACL 2024 Findings</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Miaozeng Du, Chuanyi Zhang, Yongrui Chen, Nan Hu,
-                        Guilin Qi, Haiyun Jiang, Siyuan Cheng, Bozhong Tian</p>
-                    <a href="https://aclanthology.org/2024.findings-acl.298/" target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACL Anthology
-                    </a>
-                </div>
-
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Single Image Unlearning: Efficient Machine Unlearning in Multimodal
-                        Large Language Models</p>
-                    <p class="text-gray-600 italic text-sm mb-2">NeurIPS 2024</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Qianshan Wei, Chuanyi Zhang, Guilin Qi, Miaozeng Du,
-                        Yongrui Chen, Sheng Bi, Fan Liu</p>
-                    <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/3e53d82a1113e3d240059a9195668edc-Paper-Conference.pdf"
-                       target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        NeurIPS Proceedings
-                    </a>
-                </div>
-
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Open-World Attribute Mining for E-Commerce Products with Multimodal
-                        Self-Correction Instruction Tuning</p>
-                    <p class="text-gray-600 italic text-sm mb-2">ACL 2025 Main</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Yanming Li, Xiaoli Shen, Chuanyi Zhang, Guilin Qi,
-                        Sheng Bi</p>
-                    <a href="https://aclanthology.org/2025.acl-long.85/" target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACL Anthology
-                    </a>
-                </div>
-
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Forget the Token and Pixel: Rethinking Gradient Ascent for Concept
-                        Unlearning in Multimodal Generative Models</p>
-                    <p class="text-gray-600 italic text-sm mb-2">ACL 2025 Findings</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Chuanyi Zhang, Miaozeng Du, Hui Zhang, Yongrui Chen,
-                        Qianshan Wei, Junfeng Fang, Ruipeng Wang, Sheng Bi, Guilin Qi</p>
-                    <a href="https://aclanthology.org/2025.findings-acl.630/" target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACL Anthology
-                    </a>
-                </div>
-
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Can Large Language Models Understand DL-Lite Ontologies? An Empirical
-                        Study</p>
-                    <p class="text-gray-600 italic text-sm mb-2">EMNLP 2024 Findings</p>
-                    <p class="text-gray-600 text-sm mb-3">Keyu Wang, Guilin Qi, Jiaqi Li, Songlin Zhai</p>
-                    <a href="https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2024.findings-emnlp.141.pdf"
-                       target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACL Anthology
-                    </a>
-                </div>
-            <div class="space-y-6">
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Forget What Has Seen: Selective Concept Unlearning in Segmentation Foundation Models</p>
-                    <p class="text-gray-600 italic text-sm mb-2">AAAI 2026</p>
-                    <p class="text-gray-600 text-sm mb-3">Miaozeng Du, Jiaqi Li (co-first author), Sirui Pan, Yi Zhan, Guilin Qi, Yuxin Zhang, Rihui Jin, Yinjia Shu, Qianshan Wei</p>
-                    <a href="https://openreview.net/forum?id=UVldolotab&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2026%2FConference%2FAuthors%23your-submissions)"
-                       target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        AAAI Proceedings
-                    </a>
-                </div>
-            <div class="space-y-6">
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">Knowledge Externalization: Reversible Unlearning and Modular Retrieval in Multimodal Large Language Models</p>
-                    <p class="text-gray-600 italic text-sm mb-2">ICLR 2026</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Zihan You, Ruoyan Shen, Shenyu Zhang, Songlin Zhai, Yongrui Chen, Chuanyi Zhang, Jiahui Geng, Fakhri Karray, Sheng Bi, Guilin Qi </p>
-                    <a href="https://openreview.net/forum?id=ZHK6nBHRXw&referrer=%5BAuthor+Console%5D%28%2Fgroup%3Fid%3DICLR.cc%2F2026%2FConference%2FAuthors%23your-submissions%29"
-                       target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ICLR Proceedings
-                    </a>
-                </div>
-            </div>
-            <div class="space-y-6">
-                <div class="hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
-                    <p class="font-medium mb-2">SGPVT: Self-Generated Proximal Visual Tokens for Mitigating Proximal Collateral Damage in MLLM Unlearning</p>
-                    <p class="text-gray-600 italic text-sm mb-2">ACL 2026</p>
-                    <p class="text-gray-600 text-sm mb-3">Jiaqi Li, Zhijing Zhang, Jiahui Geng, Sheng Bi, Chuanyi Zhang, Fan Liu, Guilin Qi </p>
-                    <a href="https://openreview.net/forum?id=TwiKpRaY0R&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3Daclweb.org%2FACL%2F2026%2FConference%2FAuthors%23your-submissions)"
-                       target="_blank"
-                       class="text-primary hover:text-secondary inline-flex items-center text-sm font-medium">
-                        <i class="fa fa-external-link mr-1"></i>
-                        ACL Anthology
-                    </a>
-                </div>
+        <!-- Preprints -->
+        <div class="mb-10">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                <i class="fa fa-pencil-square-o text-gray-400"></i> Preprints
+            </h3>
+            <div class="bg-blue-50/60 rounded-lg p-5 border-l-4 border-primary shadow-sm hover:shadow-md transition-all duration-300">
+                <p class="font-semibold text-gray-900 mb-2 leading-snug">Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey</p>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">Zhuo Chen, Yichi Zhang, Yin Fang, Yuxia Geng, Lingbing Guo,
+                    Xiang Chen, Qian Li, Wen Zhang, Jiaoyan Chen, Yushan Zhu, <span class="author-highlight">Jiaqi Li</span>, Xiaoze Liu, Jeff Z. Pan,
+                    Ningyu Zhang, Huajun Chen</p>
+                <a href="https://arxiv.org/abs/2402.05391" target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group">
+                    <i class="fa fa-file-pdf-o group-hover:scale-110 transform transition-transform duration-200"></i>
+                    <span>arXiv:2402.05391</span>
+                </a>
             </div>
         </div>
-    </section>
+
+        <!-- Published Papers -->
+        <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+            <i class="fa fa-check-circle text-green-500"></i> Peer-Reviewed
+        </h3>
+
+        <div class="space-y-4">
+
+            <!-- ACM MM 2023 -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Incorporating Domain Knowledge Graph into Multimodal Movie Genre Classification with Self-Supervised Attention and Contrastive Learning
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700 border border-red-200 whitespace-nowrap">
+                        ACM MM 2023
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Guilin Qi, Chuanyi Zhang, Yongrui Chen, Yiming Tan, Chenlong Xia, Ye Tian
+                </p>
+                <a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612085"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>ACM Digital Library</span>
+                </a>
+            </div>
+
+            <!-- EMNLP 2023 -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Three Stream Based Multi-level Event Contrastive Learning for Text-Video Event Extraction
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 border border-purple-200 whitespace-nowrap">
+                        EMNLP 2023 Main
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Chuanyi Zhang, Miaozeng Du, Dehai Min, Yongrui Chen, Guilin Qi
+                </p>
+                <a href="https://aclanthology.org/2023.emnlp-main.103/"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>ACL Anthology</span>
+                </a>
+            </div>
+
+            <!-- ACL 2024 Findings -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        MIKE: A New Benchmark for Fine-grained Multimodal Entity Knowledge Editing
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700 border border-yellow-200 whitespace-nowrap">
+                        ACL 2024 Findings
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Miaozeng Du, Chuanyi Zhang, Yongrui Chen, Nan Hu, Guilin Qi, Haiyun Jiang, Siyuan Cheng, Bozhong Tian
+                </p>
+                <a href="https://aclanthology.org/2024.findings-acl.298/"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>ACL Anthology</span>
+                </a>
+            </div>
+
+            <!-- NeurIPS 2024 -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Single Image Unlearning: Efficient Machine Unlearning in Multimodal Large Language Models
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700 border border-gray-200 whitespace-nowrap">
+                        NeurIPS 2024
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Qianshan Wei, Chuanyi Zhang, Guilin Qi, Miaozeng Du, Yongrui Chen, Sheng Bi, Fan Liu
+                </p>
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/3e53d82a1113e3d240059a9195668edc-Paper-Conference.pdf"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>NeurIPS Proceedings</span>
+                </a>
+            </div>
+
+            <!-- EMNLP 2024 Findings -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Can Large Language Models Understand DL-Lite Ontologies? An Empirical Study
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 border border-purple-200 whitespace-nowrap">
+                        EMNLP 2024 Findings
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    Keyu Wang, Guilin Qi, <span class="author-highlight">Jiaqi Li</span>, Songlin Zhai
+                </p>
+                <a href="https://aclanthology.org/anthology-files/pdf/findings/2024.findings-emnlp.141.pdf"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>ACL Anthology</span>
+                </a>
+            </div>
+
+            <!-- ACL 2025 Main -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Open-World Attribute Mining for E-Commerce Products with Multimodal Self-Correction Instruction Tuning
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700 border border-yellow-200 whitespace-nowrap">
+                        ACL 2025 Main
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Yanming Li, Xiaoli Shen, Chuanyi Zhang, Guilin Qi, Sheng Bi
+                </p>
+                <a href="https://aclanthology.org/2025.acl-long.85/"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>ACL Anthology</span>
+                </a>
+            </div>
+
+            <!-- ACL 2025 Findings -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Forget the Token and Pixel: Rethinking Gradient Ascent for Concept Unlearning in Multimodal Generative Models
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700 border border-yellow-200 whitespace-nowrap">
+                        ACL 2025 Findings
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Chuanyi Zhang, Miaozeng Du, Hui Zhang, Yongrui Chen, Qianshan Wei, Junfeng Fang, Ruipeng Wang, Sheng Bi, Guilin Qi
+                </p>
+                <a href="https://aclanthology.org/2025.findings-acl.630/"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>ACL Anthology</span>
+                </a>
+            </div>
+
+            <!-- AAAI 2026 -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Forget What Has Seen: Selective Concept Unlearning in Segmentation Foundation Models
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 border border-green-200 whitespace-nowrap">
+                        AAAI 2026
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    Miaozeng Du,&nbsp;<span class="author-highlight">Jiaqi Li</span> (co-first author),&nbsp;Sirui Pan,&nbsp;Yi Zhan,&nbsp;Guilin Qi,&nbsp;Yuxin Zhang,&nbsp;Rihui Jin,&nbsp;Yinjia Shu,&nbsp;Qianshan Wei
+                </p>
+                <a href="https://openreview.net/forum?id=UVldolotab"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>OpenReview</span>
+                </a>
+            </div>
+
+            <!-- ICLR 2026 -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        Knowledge Externalization: Reversible Unlearning and Modular Retrieval in Multimodal Large Language Models
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200 whitespace-nowrap">
+                        ICLR 2026
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Zihan You, Ruoyan Shen, Shenyu Zhang, Songlin Zhai, Yongrui Chen, Chuanyi Zhang, Jiahui Geng, Fakhri Karray, Sheng Bi, Guilin Qi
+                </p>
+                <a href="https://openreview.net/forum?id=ZHK6nBHRXw"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>OpenReview</span>
+                </a>
+            </div>
+
+            <!-- ACL 2026 -->
+            <div class="group bg-gray-50/50 hover:bg-white border border-transparent hover:border-gray-200 hover:shadow-lg rounded-xl p-5 transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                    <p class="font-semibold text-gray-900 leading-snug flex-1">
+                        SGPVT: Self-Generated Proximal Visual Tokens for Mitigating Proximal Collateral Damage in MLLM Unlearning
+                    </p>
+                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700 border border-yellow-200 whitespace-nowrap">
+                        ACL 2026
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                    <span class="author-highlight">Jiaqi Li</span>, Zhijing Zhang, Jiahui Geng, Sheng Bi, Chuanyi Zhang, Fan Liu, Guilin Qi
+                </p>
+                <a href="https://openreview.net/forum?id=TwiKpRaY0R"
+                   target="_blank"
+                   class="text-primary hover:text-secondary inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 group/link">
+                    <i class="fa fa-external-link group-hover/link:rotate-12 transform transition-transform duration-200"></i>
+                    <span>OpenReview</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <!-- Academic Services Section -->
     <section id="services" class="mb-16 section-fade">
